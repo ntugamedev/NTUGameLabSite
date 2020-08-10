@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<html>
+	 <head>
+	 	<meta charset="utf-8">
+	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 	<title>
+	 		NTUGameLab
+	 	</title>
+	 	
+	 	<link href="css/style_final.css" rel="stylesheet">
+	 	<link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
+	 	<script>
+	 		function expandfunc() {
+	 			document.getElementById("expandable").style.height = "100%";
+	 			document.getElementById("expandable").style.position = "static";
+	 			document.getElementById("box").style.display = "none";
+	 			document.getElementById("minbox").style.display = "block";
+	 			document.getElementById("expandable").style.overflow = "visible";
+	 			//event_date addition of px not working rn
+	 			var x = document.getElementsByClassName("date_text");
+				var y = document.getElementsByClassName("game_titles");
+	 			var a;
+	 			for (a = 0; a < x.length; a++) {
+  					y[a].style.top = "50px";
+					}
+				var b;
+	 			for (b = 0; b < y.length; b++) {
+  					x[b].style.top = "50px";
+					}
+	 		}
+
+	 		function minfunc() {
+	 			document.getElementById("expandable").style.height = "50vh";
+	 			document.getElementById("expandable").style.position = "relative";
+	 			document.getElementById("box").style.display = "block";
+	 			document.getElementById("minbox").style.display = "none";
+	 			document.getElementById("expandable").style.overflow = "scroll";
+	 			var x = document.getElementsByClassName("date_text");
+	 			var i;
+	 			for (i = 0; i < x.length; i++) {
+  					x[i].style.top = "0px";
+					}
+				var y = document.getElementsByClassName("game_titles");
+	 			var a;
+	 			for (a = 0; a < x.length; a++) {
+  					y[a].style.top = "0px";
+					}
+
+				window.location = "#section2";
+	 		}
+
+	 		window.addEventListener("load", () => {
+ 			document.querySelector("body").classList.add("loaded"); 
+			});
+	 	</script>
+	 </head>
+
+	 <nav>
+	 	<ul>
+	 		<li><a href="#section1">Home</a></li>
+	 			<li><a href="#section2">Events</a>
+                        <!--dropdown contents-->
+                    <ul class="dropdown">
+                        <li><a href="#section2">Studio sessions</a></li>
+                        <li><a href="#section23">Game Jams</a></li>
+                        <li><a href="#section24">Lab Social</a></li>
+                        <li><a href="#section25">Club Game</a></li>
+                    </ul>
+            	</li>
+	 		<li><a href="#section3">Games</a></li>
+	 		<li><a href="#section4">Game recs</a></li>
+	 		<li><a href="#section5">Contact us</a></li>
+	 	</ul>
+	 	<section class="clearfix"></section>
+	 </nav>
+
+	 <body>
+	 	<section class="wrapper">
+	 		<header id="section1">
+	 			<section>
+		 			<img src="images/GL logo.jpg" alt="GameLab logo">
+		 			<h1>NTU Game Lab</h1>
+		 			<h4>
+					NTU Game Lab is a game development club for artists, writers, programmers and other creative people to share, discuss and make games! While it is not affiliated with NTU, the club is based in the ADM campus and made up of NTU students. We welcome any NTU student to join us for our weekly Studio sessions in ADM! Find out more on how you can join us in the Contact section, or learn more about the activities we conduct here in the Game Lab Events section.
+					</h4>
+					<p> ANNOUNCMENT: Since we are nearing the end of the school term, our studio sessions are on hold till further notice.</p>
+				</section>
+			</header>
+
+			<section class="section_header" id="section2" style="padding-top:50px">
+				<h2>Events</h2>
+			</section>
+
+			<section class="studio_container">
+				<section class="studio_header">
+				<h3 class="events_header" id="section21">Studio Sessions</h3>
+				<p>During the school term, we conduct weekly Studio Sessions where we play, discuss and critique our internally selected game of the week! Take a look at an overview of our sessions so far.</p>
+				<section class="minbox" id="minbox"><button onclick="minfunc()"><p>Minimise</p></button></section>
+				</section>
+
+				<section class="timeline_container" id="expandable">
+					<ul>
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Apr 6 2020 </p></section>
+							<h3 class="game_titles">Batman: Arkham Knight</h3>
+
+							<a href="https://rocksteadyltd.com/#arkham-knight" target="_blank" class="image">
+								<section class="image_container">
+									<img src="images/batman.png" alt="https://rocksteadyltd.com/#arkham-knight" class="game_image" style="width:100%">
+									<section class="overlay">
+										<section class="text">Go to site</section>
+									</section>
+								</section>
+							</a>
+							<section class="clearfix"></section>
+
+							<section class="para">
+								<p>Name: Batman: Arkham Knight</p>
+								<p>Creator: Rcoksteady Studios</p>
+								<p>Release date: 2015</p>
+								<p>Platforms: PC, Playstation 4, Xbox One</p>
+							</section>
+
+							<p>[This session was held online in Discord]
+							After a few weeks of indie games, we return to a triple A franchise. With it's atmospheric music and gritty shaders, we discussed the use of the Batman IP within the game world, as well as overused comic book cliches in game. With the game's extensive amount of content and unique mechanics, it is hard to find any fault in such a game made with as much time, effort and love as Batman: Arkham Knight.</p>
+						</li>
+
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Mar 30 2020 </p></section>
+							<h3 class="game_titles">Disco Elysium</h3>
+
+							<a href="https://zaumstudio.com" target="_blank" class="image">
+								<section class="image_container">
+									<img src="images/Disco.png" alt="https://zaumstudio.com" class="game_image" style="width:100%">
+									<section class="overlay">
+										<section class="text">Go to site</section>
+									</section>
+								</section>
+							</a>
+							<section class="clearfix"></section>
+
+							<section class="para">
+								<p>Name: Disco Elysium</p>
+								<p>Creator: ZA/UM</p>
+								<p>Release date: 2019</p>
+								<p>Platforms: PC, Playstation 4, Xbox One</p>
+							</section>
+
+							<p>[This session was held online in Discord]
+							The award-winning rpg game, Disco Elysium brought us along a journey of examining desktop game mechanics and text adventure games combined. The interesting UI design, accompanied by a talk by the developers regarding it, serves as a backdrop for us to think about considerations for our own UI designs in future.</p>
+						</li>
+
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Mar 23 2020 </p></section>
+
+								<h3 class="game_titles">Thomas was alone</h3>
+								<a href="http://www.mikebithellgames.com/thomaswasalone/" target="_blank" class="image">
+									<section class="image_container">
+										<img src="images/TWA.png" alt="http://www.mikebithellgames.com/thomaswasalone/" class="game_image" style="width:100%">
+										<section class="overlay">
+											<section class="text">Go to site</section>
+										</section>
+									</section>
+								</a>
+								<section class="clearfix"></section>
+
+								<section class="para">
+									<p>Name: Thomas was alone</p>
+									<p>Creator: Mike Bithell</p>
+									<p>Release date: 2012</p>
+									<p>Platforms: PC, Playstation 4, Android, Xbox One</p>
+								</section>
+
+								<p>[This session was held online in Discord] Thomas was alone implored us to examine how an interesting narration can make us invested in the most simplest of character sprites. While the portrayal of female characters in the game has room for improvement, each of the cubic characters are fleshed out well through their abilities and their thoughts. As a puzzle platformer, the game has small accessibility issues and slightly unbalanced difficulty, giving rise to our discussion of how we could improve the game to allow different skill levels to complete such a game.</p>
+						</li>
+
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Mar 16 2020 </p></section>
+
+								<h3 class="game_titles">Undertale</h3>
+								<a href="https://undertale.com" target="_blank" class="image">
+									<section class="image_container">
+										<img src="images/Undertale.jpg" alt="https://undertale.com" class="game_image" style="width:100%">
+										<section class="overlay">
+											<section class="text">Go to site</section>
+										</section>
+									</section>
+								</a>
+								<section class="clearfix"></section>
+
+								<section class="para">
+									<p>Name: Undertale</p>
+									<p>Creator: Toby Fox</p>
+									<p>Release date: 2015</p>
+									<p>Platforms: PC, PS4, PS Vita, Nintendo switch</p>
+								</section>
+
+								<p>Undertale, the intrnational sensation. We discussed how Undertale wins the hearts of so many players with its great sotrytelling and compelling music. Even while it's gameplay may not be for everyone, it's whismical and unique narrative tone is consistently loved by a great number of people. It truly is an insiprational game, not just through its contents, but also through the meta narrative of a single person, working mostly by himself, being able to bring an entire world to life through successfuly creating such an expansive game.</p>
+						</li>
+
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Mar 9 2020 </p></section>
+							<h3 class="game_titles">Abzu</h3>
+							<a href="https://abzugame.com" target="_blank" class="image">
+								<section class="image_container">
+									<img src="images/abzu.jpg" alt="https://abzugame.com" class="game_image" style="width:100%">
+									<section class="overlay">
+										<section class="text">Go to site</section>
+									</section>
+								</section>
+							</a>
+							<section class="clearfix"></section>
+
+							<section class="para">
+								<p>Name: Abzu</p>
+								<p>Company: Giant Squid</p>
+								<p>Release date: 2016</p>
+								<p>Platforms: PC, PS4, Xbox One, Nintendo switch</p>
+							</section>
+
+							<p>Diving into the beautiful world that is Abzu, we examined the use of symbols, lighting and leading lines in level design and storytelling. Although it's controls take some getting used to and the gameplay may be dry for some of our members, we all had a good time listening to this <a href="https://youtu.be/l9NX06mvp2E" target="_blank">talk</a> by the developers on how they solved certain issues they faced with the game.</p>
+						</li>
+
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Feb 24 2020 </p></section>
+							<h3 class="game_titles">StarCraft</h3>
+							<a href="https://starcraft.com/en-sg/" target="_blank" class="image">
+								<section class="image_container">
+									<img src="images/starcraft.jpg" alt="https://starcraft.com/en-sg/" class="game_image" style="width:100%">
+									<section class="overlay">
+										<section class="text">Go to site</section>
+									</section>
+								</section>
+							</a>
+							<section class="clearfix"></section>
+
+							<section class="para">
+								<p>Name: StarCraft</p>
+								<p>Company: Blizzard Entertainment</p>
+								<p>Release date: 1998</p>
+								<p>Platforms: PC, Nintendo64</p>
+							</section>
+
+							<p>We explore the original real-time strategy game that started the entire genre and introduced new ways to integrate storytelling with gameplay. While we spent time criticising the limited pathfinding capabilities of this classic, the game also gave us an opportunity  appreciate how technology has improved through our lifetime.</p>
+						</li>
+
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Feb 17 2020 </p></section>
+							<h3 class="game_titles">Sky: Children of the light</h3>
+							<a href="https://thatskygame.com" target="_blank" class="image">
+								<section class="image_container">
+									<img src="images/skyimage.jpg" alt="https://thatskygame.com" class="game_image" style="width:100%">
+									<section class="overlay">
+										<section class="text">Go to site</section>
+									</section>
+								</section>
+							</a>
+							<section class="clearfix"></section>
+
+							<section class="para">
+								<p>Name: Sky:Children of the light</p>
+								<p>Company: That Game company</p>
+								<p>Release date: 2019</p>
+								<p>Platforms: Xbox One, IOS, Android, Playstation 4</p>
+							</section>
+
+							<p>Our first lab session examining a mobile game, ThatSkyGame brought us a journey through cloud shaders, crunchy grass sound effects and slightly troublesome one-handed controls. We discussed the choices made for the game to be mobile and multiplayer, as well as how it might function as a walking simulator instead.</p>
+						</li>
+
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Feb 10 2020 </p></section>
+							<h3 class="game_titles">Half-life 2</h3>
+							<a href="https://www.half-life.com/en/halflife2" target="_blank" class="image">
+								<section class="image_container">
+									<img src="images/halflife2_coverart.jpg" alt="https://www.half-life.com/en/halflife2" class="game_image" style="width:100%">
+									<section class="overlay">
+										<section class="text">Go to site</section>
+									</section>
+								</section>
+							</a>
+							<section class="clearfix"></section>
+
+							<section class="para">
+								<p>Name: Half-life 2</p>
+								<p>Company: Valve</p>
+								<p>Release date: 2004</p>
+								<p>Platforms: Xbox, Xbox 360, PlayStation 3, PC</p>
+							</section>
+
+							<p>We examined this classic for all its firsts in video game history, such as its extensive use of environmental storytelling, lack of cutscene and interactability with physics objects in game. We also spent time appreciating the signposting in the game, where lit areas lead the player towards their next objective. From the occasional trouble the new players in our session faced, there were still some unresolved pathfinding issues in the game.</p>
+						</li>
+
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Feb 3 2020 </p></section>
+							<h3 class="game_titles">Edith Finch</h3>
+							<a href="http://www.giantsparrow.com/games/finch/" target="_blank" class="image">
+								<section class="image_container">
+									<img src="images/house_through_trees.jpg" alt="http://www.giantsparrow.com/games/finch/" class="game_image" style="width:100%">
+									<section class="overlay">
+										<section class="text">Go to site</section>
+									</section>
+								</section>
+							</a>
+							<section class="clearfix"></section>
+
+							<section class="para">
+								<p>Name: What remains of Edith Finch</p>
+								<p>Company: Giant sparrow</p>
+								<p>Release date: 2017</p>
+								<p>Platforms: Playstation4, Xbox 1, Nintendo switch</p>
+							</section>
+
+							<p>This walking simulator brought us a journey through the intricacies of level design, detailed modeling and storytelling. Within the studio session, we managed to complete most of the game. Most of us were extremely taken by how well the level is designed, such that even diverging paths are hidden from view; only to be seen when viewed at a specific angle in game.</p>
+						</li>
+
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Oct 30 2019 </p></section>
+							<h3 class="game_titles">Hades</h3>
+
+							<a href="https://www.supergiantgames.com/games/hades/" target="_blank" class="image">
+								<section class="image_container">
+									<img src="images/hades.jpg" alt="https://www.supergiantgames.com/games/hades/" class="game_image" style="width:100%">
+									<section class="overlay">
+										<section class="text">Go to site</section>
+									</section>
+								</section>
+							</a>
+							<section class="clearfix"></section>
+
+							<section class="para">
+								<p>Name: Hades</p>
+								<p>Company: Supergiant Games</p>
+								<p>Release date: Early access, 2018</p>
+								<p>Platforms: PC (Windows)</p>
+							</section>
+
+							<p>We explored reasons for the longevity of the Rogue-like genre of games, examining the crucial aspects of games in the genre and how it incorporates forms of progression even while keeping the randomised enemy rooms. We also spent time appreciating the aesthetics of Hades, with its clear colour coded enemy types and telegraphing.</p>
+						</li>
+
+						<li class="monogame_container">
+							<section class="event_date"><p class="date_text"> Oct 23 2019 </p></section>
+							<h3 class="game_titles">BOTW</h3>
+							<a href="https://www.nintendo.com/games/detail/the-legend-of-zelda-breath-of-the-wild-switch/" target="_blank" class="image">
+								<section class="image_container">
+									<img src="images/BOTW_char.jpg" alt="https://www.nintendo.com/games/detail/the-legend-of-zelda-breath-of-the-wild-switch/" class="game_image" style="width:100%">
+									<section class="overlay">
+										<section class="text">Go to site</section>
+									</section>
+								</section>
+							</a>
+
+							<section class="para">
+								<p>Name: the Legend of Zelda: Breath of the Wild</p>
+								<p>Company: Nintendo</p>
+								<p>Release date: 2017</p>
+								<p>Platforms: Nintendo Switch, Wii U</p>
+							</section>
+
+							<p>We took a deep dive into the graphics system for the creation of campfires and smoke in the legend of zelda game: breath of the wild. We also held a spirited discussion over the various technical exploits used to speedrun the game, and others like it; such as, using the resetting of 3D character models during equipment swap to shift sprite position into outofbounds.</p>
+						</li>
+
+						<li class="multigame">
+							<section class="event_date"><p class="date_text"> Oct 16 2019 </p></section>
+							<h3 class="game_titles">Untitled goose & overcooked</h3>
+										<a href="http://www.ghosttowngames.com/overcooked/" target="_blank" class="image image1">
+											<section class="image_container">
+												<img src="images/Boat_Screen.jpg" alt="http://www.ghosttowngames.com/overcooked/" class="game_image" style="width:100%">
+												<section class="overlay">
+													<section class="text">Go to site</section>
+												</section>
+											</section>
+										</a>
+
+										<a href="https://goose.game" target="_blank" class="image image2">
+											<section class="image_container">
+												<img src="images/goose_game.jpg" alt="https://goose.game" class="game_image" style="width:100%">
+												<section class="overlay">
+													<section class="text">Go to site</section>
+												</section>
+											</section>
+										</a>
+										<section class="clearfix"></section>
+
+										<section class="para">
+											<p>Name: Overcooked</p>
+											<p>Company: 2016</p>
+											<p>Release date: Ghost town games</p>
+											<p>Platforms: Nintendo Switch, PlayStation 4, Xbox 1, PC(Windows)</p>
+											<p> </p>
+
+											<p>Name: untitled goose game</p>
+											<p>Company: House house</p>
+											<p>Release date: 2019</p>
+											<p>Platforms: Nintendo Switch, PlayStation 4, Xbox 1, PC(Windows)</p>
+										</section>
+
+								<p>We spent a relaxing afternoon discussing unconventional game types and why the Untitled goose game managed to capture the hearts of so many gamers. We also spent some time in overcooked, experiencing for ourselves the phenomenon of going into the "zone", a state of high concentration that any competitive gamers cite as a state of high concentration and performance.</p>
+						</li>
+
+						<section class="clearfix"></section>
+					</ul>
+					<section class="box" id="box"><button onclick="expandfunc()"><p>Expand</p></button></section>
+				</section>
+				<section class="clearfix"></section>
+			</section>
+
+			<section class="jam_container"  id="section23" style="padding-top:50px"> 
+				<section class="events_n_info">
+				<section class="events_header">
+					<h3>Holiday game jam</h3>
+				</section>
+			<p class="jam_info">Our members are encouraged to participate in a game jam each school holiday. The club will host their own game jam, however, members may also join an external game jam of their choice. Non-members are welcome to join the Game lab's public game jams as well.</p></section>
+
+			<ul>
+				<li>
+					<h3>Bear Jams 2019:</h3>
+					<p><a href="https://itch.io/jam/bear-jams-fall-2019" target="_blank">Bear Jams Page</a></p>
+					<!--https://itch.io/jam/bear-jams-fall-2019-->
+					<p>This was a game jam held by the game development club of UC Berkeley.</p>
+				</li>
+
+				<li>
+					<h3>Eclipse jam 2019:</h3>
+					<p><a href="https://itch.io/jam/solar-eclipse-jam" target="_blank">Eclipse Jams Page</a></p>
+					<!--https://itch.io/jam/solar-eclipse-jam-->
+					<p>This was the first game jam hosted by NTU Game Lab. It was created as the holiday jam of Dec 2019, and earned its name from the eclipse that was viewable in Singapore a day before the Jam is scheduled to begin.</p>
+				</li>
+			</ul>
+			</section>
+
+			<section class="social"  id="section24" style="padding-top:50px">
+				<section class="events_header">
+					<h3>Game lab social 2019</h3>
+				</section>
+				<img src="images/2019_meet.jpg" alt="2019 meetup poster">
+				<section class="hov">
+				<p>Other than organising a game jam during the holidays, NTU Game Lab also took the time to get together outside of school, at the Hopscotch cafe in the Gillman barracks, to catch up with each other. Games were played, projects were shared and pizza were eaten. Everyone had a good time meeting up and talking about their shared passions.</p>
+			    </section>
+			</section>
+			<section class="clearfix"></section>
+
+			<section class="information"  id="section25" style="padding-top:50px">
+				<section class="section_header">
+					<h3>Club collaborated game</h3>
+				</section>
+			<p>NTU Game Lab is going to create a collaborative game between its members, through the newly introduced Club Game initiative. Members will work together to make a modular, easily modified game that all members of any skill level can contribute content to and build upon.</p>
+			</section>
+
+			<section class="memberlist" id="section3" style="padding-top:50px">
+				<section class="section_header">
+					<h2>Games made by club members</h2>
+				</section>
+			<p>The NTU game lab is made up of many talented students who aspire to become great game designers in future. Here are some of their current works, made for school, leisure, work or jams.</p>
+			<!--later on ask the game lab peeps if theyre interested to have their game link on my mockup -->
+			<ul>
+				<li>
+					<a href="https://chinkeeyong.github.io/weight-of-soul" target="_blank"><p>Weight of soul</p></a>
+				</li>
+				<li>
+					<a href="https://youtu.be/vsueeDUOIGk" target="_blank"><p>Things in the dark</p></a>
+				</li>
+				<li>
+					<a href="https://cracticusly.itch.io/invisibilikitty" target="_blank"><p>Invisibilikitty</p></a>
+				</li>
+				<li>
+					<a href="https://jirehcwe.itch.io/not-on-my-planet" target="_blank"><p>Not on my planet</p></a>
+				</li>
+				<li>
+					<a href="https://cracticusly.itch.io/bull-in-a-china-shop" target="_blank"><p>Bull in a china shop</p></a>
+				</li>
+				<li> 
+					<a href="https://cracticusly.itch.io/to-the-deep" target="_blank"><p>To The Deep</p></a>
+				</li>
+			</ul>
+			</section>
+
+			<section class="game_rec" id="section4" style="padding-top:50px">
+				<section class="recninfo">
+				<section class="section_header">
+					<h2>Recommendations from club members</h2>
+				</section>
+			<p>Our club members would like to share some of their favourite games with you. These games motivate us, challenge us and inspire us in our own process of making games.</p></section>
+			<!--also ask for game recs -->
+			<ul class="gamerec">
+				<li class="rec">
+					<h3 class="game_titles">Transistor</h3>
+					<a href="https://www.supergiantgames.com/games/transistor/" target="_blank" class="image">
+						<section class="image_container">
+							<img src="images/Transistor_Box_Art_.jpg" alt="https://www.supergiantgames.com/games/transistor/" class="game_image" style="width:100%">
+							<section class="overlay">
+								<section class="text">Go to site</section>
+							</section>
+						</section>
+					</a>
+					<section id="test" class="leftmost">
+					<section class="para">
+						<p>Name: Transistor</p>
+						<p>Company: Supergiant Games</p>
+						<p>Release date: 2017</p>
+						<p>Platforms: PlayStation 4, Nintendo Switch, PC</p>
+					</section>
+
+					<p>Transistor is my favourite game - Chen Mingyue</p>
+				</section>
+				</li>
+				<section class="clearfix"></section>
+
+				<li class="rec">
+					<h3 class="game_titles">Transistor</h3>
+					<a href="https://www.supergiantgames.com/games/transistor/" target="_blank" class="image">
+						<section class="image_container">
+							<img src="images/Transistor_Box_Art_.jpg" alt="https://www.supergiantgames.com/games/transistor/" class="game_image" style="width:100%">
+							<section class="overlay">
+								<section class="text">Go to site</section>
+							</section>
+						</section>
+					</a>
+					<section id="test">
+					<section class="para">
+						<p>Name: Transistor</p>
+						<p>Company: Supergiant Games</p>
+						<p>Release date: 2017</p>
+						<p>Platforms: PlayStation 4, Nintendo Switch, PC</p>
+					</section>
+
+					<p>Transistor is my favourite game - Chen Mingyue</p>
+				</section>
+				</li>
+				<section class="clearfix"></section>
+
+				<li class="rec">
+					<h3 class="game_titles">Transistor</h3>
+					<a href="https://www.supergiantgames.com/games/transistor/" target="_blank" class="image">
+						<section class="image_container">
+							<img src="images/Transistor_Box_Art_.jpg" alt="https://www.supergiantgames.com/games/transistor/" class="game_image" style="width:100%">
+							<section class="overlay">
+								<section class="text">Go to site</section>
+							</section>
+						</section>
+					</a>
+					<section id="test">
+					<section class="para">
+						<p>Name: Transistor</p>
+						<p>Company: Supergiant Games</p>
+						<p>Release date: 2017</p>
+						<p>Platforms: PlayStation 4, Nintendo Switch, PC</p>
+					</section>
+
+					<p>Transistor is my favourite game - Chen Mingyue</p>
+				</section>
+				</li>
+				<section class="clearfix"></section>
+
+				<li class="rec">
+					<h3 class="game_titles">Transistor</h3>
+					<a href="https://www.supergiantgames.com/games/transistor/" target="_blank" class="image">
+						<section class="image_container">
+							<img src="images/Transistor_Box_Art_.jpg" alt="https://www.supergiantgames.com/games/transistor/" class="game_image" style="width:100%">
+							<section class="overlay">
+								<section class="text">Go to site</section>
+							</section>
+						</section>
+					</a>
+					<section id="test">
+					<section class="para">
+						<p>Name: Transistor</p>
+						<p>Company: Supergiant Games</p>
+						<p>Release date: 2017</p>
+						<p>Platforms: PlayStation 4, Nintendo Switch, PC</p>
+					</section>
+
+					<p>Transistor is my favourite game - Chen Mingyue</p>
+				</section>
+				</li>
+				<section class="clearfix"></section>
+
+				<li class="rec">
+					<h3 class="game_titles">Transistor</h3>
+					<a href="https://www.supergiantgames.com/games/transistor/" target="_blank" class="image">
+						<section class="image_container">
+							<img src="images/Transistor_Box_Art_.jpg" alt="https://www.supergiantgames.com/games/transistor/" class="game_image" style="width:100%">
+							<section class="overlay">
+								<section class="text">Go to site</section>
+							</section>
+						</section>
+					</a>
+					<section id="test" class="rightmost">
+					<section class="para">
+						<p>Name: Transistor</p>
+						<p>Company: Supergiant Games</p>
+						<p>Release date: 2017</p>
+						<p>Platforms: PlayStation 4, Nintendo Switch, PC</p>
+					</section>
+
+					<p>Transistor is my favourite game - Chen Mingyue</p>
+				</section>
+				</li>
+				<section class="clearfix"></section>
+				
+			</ul>
+			</section>
+
+			<section class="contact" id="section5">
+				<section class="section_header">
+					<h2>Contact Us!</h2>
+				</section>
+			<ul>
+				<section class="suggestions">
+					<li>
+						<p>Members can submit game titles for consideration for the next studio session here:</p>
+						<p> </p>
+						<p> </p>
+						<p><a href="https://tinyurl.com/NTUGL-GameSuggestions" target="_blank">Game Suggestions</a></p> 
+						<p> </p>
+						<p> </p>
+					</li>
+				</section>
+				<section class="telegram">
+					<li>
+						<p>Join us on our Telegram group!</p>
+						<p> </p>
+						<p> </p>
+						<p><a href="https://tinyurl.com/NTUGDD-Telegram" target="_blank">Telegram</a></p>
+						<p> </p>
+						<p> </p>
+						<p>Or join us on our Discord group!</p>
+						<p> </p>
+						<p> </p>
+						<p><a href="https://discord.gg/wYmhC6y" target="_blank"> Discord </a></p>
+						<p> </p>
+						<p> </p>
+
+					</li>
+				</section>
+				<section class="email">
+					<li>
+						<p>Any questions regarding the club?</p>
+						<p> </p>
+						<p> </p>
+						<p><a href="mailto:chen1234@e.ntu.edu.sg">Contact us! </a></p>
+					</li>
+				</section>
+				<section class="clearfix"></section>
+			</section>
+		</section>
+	</body>
+</html>
+	 
