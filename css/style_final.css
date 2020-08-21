@@ -12,6 +12,7 @@
 		  	  font-family: Itim;
 		      position: relative;
 		      background-color:#2b1622;
+		      overflow: scroll;
 		  }
 
 		  header {
