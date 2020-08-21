@@ -1,5 +1,4 @@
-/* this is CSS comment format*/
-/* this code contains documentation */
+
 		  * {
 		  	/*into the matrix!*/
 		  	margin: 0;
@@ -13,6 +12,7 @@
 		  	  font-family: Itim;
 		      position: relative;
 		      background-color:#2b1622;
+		      overflow-y:hidden;
 		  }
 
 		  header {
@@ -65,8 +65,7 @@
           		transform: translateY(0);
           	}
           }
-
-          /*formatting for all paras */
+ 
           p {
           	margin: 5px;
           }
@@ -110,6 +109,13 @@
             font-size: 18px;
             transform: translateY(-30px);
             opacity: 0;
+
+            /*scroll*/
+            display: flex;
+		  	flex-wrap: nowrap;
+		  	overflow-x: scroll;
+		  	overflow-y: hidden;
+		  	/*scroll*/
     	  }
 
     	  .loaded nav{
@@ -273,7 +279,7 @@
 		  .monogame_container {
 			display:grid;
 			grid-template-columns: 1fr 2fr 5fr;
-			grid-template-rows: 27px 1fr 110px 300px;
+			grid-template-rows: 27px 1fr auto auto;
 		  }
 
 		  .image_container {
@@ -325,7 +331,7 @@
 		  .multigame{
 			display:grid;
 			grid-template-columns: 1fr 3fr 5fr;
-			grid-template-rows: 27px 1fr 1fr 300px;
+			grid-template-rows: auto 1fr 1fr 300px;
 		  }
 
 		  .multigame .event_date {
@@ -387,7 +393,7 @@
 		  .minbox {
 		  	position: relative;
 		  	top: -37px;
-		  	left: 150px;
+		  	left: 10px;
 		  	text-align:center;
 		  	margin:0;
 		  	z-index:3;
@@ -629,6 +635,14 @@
 			/* Tablet */
 			 @media screen and (min-width:768px) {
 
+			 	nav{
+			 		/*scroll*/
+            	display: initial;
+		  		flex-wrap: initial;
+		  		overflow-x: initial;
+		  		/*scroll*/
+			 	}
+
 			 	.studio_header {
 			 		width: 20%;
 			 		float:left;
@@ -652,7 +666,7 @@
 				.monogame_container{
 					display:grid;
 					grid-template-columns: 1fr 4fr 5fr;
-					grid-template-rows: 25px 3fr 2fr;
+					grid-template-rows: 25px auto auto;
 		  		}
 
 		  		.monogame_container .image {
@@ -684,7 +698,7 @@
 				 .multigame{
 				  	display:grid;
 					grid-template-columns: 1fr 2fr 2fr 5fr;
-					grid-template-rows: 27px 1fr 110px 300px;
+					grid-template-rows: 27px 1fr auto auto;
 				  }
 
 				  .multigame .image1 {
@@ -814,13 +828,13 @@
 
 		  		 .leftmost {
 		  		 	position: relative;
-		  		 	left: 100px;
+		  		 	left: 120px;
 		  		 	text-align:left;
 		  		 }
 
 		  		 .rightmost {
 		  		 	position: relative;
-		  		 	right: 100px;
+		  		 	right: 120px;
 		  		 	text-align:right;
 		  		 }
 
@@ -875,6 +889,18 @@
 					grid-template-rows:1fr 20vw 20vw 3fr;
 		  		 }
 
+		  		 .leftmost {
+		  		 	position: relative;
+		  		 	left: 180px;
+		  		 	text-align:left;
+		  		 }
+
+		  		 .rightmost {
+		  		 	position: relative;
+		  		 	right: 180px;
+		  		 	text-align:right;
+		  		 }
+
                	 .contact {
                 	height: 10%;
                 }
@@ -883,4 +909,15 @@
           	/* Large screens ----------- */
 			@media only screen  and (min-width : 1824px) {
 			/* Styles */
+			.leftmost {
+		  		 	position: relative;
+		  		 	left: 250px;
+		  		 	text-align:left;
+		  		 }
+
+		    .rightmost {
+		  		 	position: relative;
+		  		 	right: 250px;
+		  		 	text-align:right;
+		  		 }
 			}
