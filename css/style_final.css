@@ -380,6 +380,22 @@
 
 		  /* Upcoming events*/
 
+		  .timeline_containerA {
+		  	color: white;
+		  	overflow: scroll;
+		  	position: relative;
+		  	border-radius: 10px;
+		  	height: 20vh;
+		  }
+
+		  .timeline_containerA a {
+		  	color: orange;
+		  }
+
+		  .timeline_containerA a:hover {
+		  	color: #ffd300;
+		  }
+
 		  .upcoming{
 			display:grid;
 			grid-template-columns: 1fr 3fr 5fr;
